@@ -1,0 +1,103 @@
+<!--  ======================================================================
+  INSTITUCIÓN: CBTis 166 Pablo Torres Burgos
+  ----------------------------------------------------------------------
+  * Estudiante: Gaona Castro Eduardo Baltazar
+  * Grupo: 3B PRO VESP  
+  * Actividad: Práctica Temática sobre Formularios en HTML5
+  ====================================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - PlayStation Network</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Contenedor principal que divide la pantalla en dos mitades -->
+    <div class="portal-container">
+
+        <!-- LADO IZQUIERDO: Panel de Marca Estilo PlayStation -->
+        <div class="portal-brand-side">
+            <div class="brand-content">
+                
+                <!-- Insignia superior -->
+                <div class="brand-badge">
+                    <span class="badge-dot"></span> PlayStation Network
+                </div>
+
+                <div class="brand-logo-large">
+                    <span class="logo-icon">🎮</span>
+                    <h1>Play<span>Station</span></h1>
+                </div>
+                
+                <p class="brand-tagline">
+                    Inicia sesión para conectar con tus amigos, unirte a grupos de chat, acceder a tu biblioteca de juegos y disfrutar del entretenimiento sin límites.
+                </p>
+
+                <!-- Tarjetas pequeñas de características -->
+                <div class="brand-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">🏆</div>
+                        <div>
+                            <h4>Trofeos y Logros</h4>
+                            <div>Sincroniza tus progresos, trofeos y compara estadísticas con la comunidad global.</div>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">☁️</div>
+                        <div>
+                            <h4>Guardado en la Nube</h4>
+                            <div>Tus partidas e historiales respaldados y listos en cualquier consola PS5 o PS4.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- LADO DERECHO: Tarjeta del Formulario de Inicio de Sesión -->
+        <div class="portal-form-side">
+            <div class="login-card">
+                
+                <div class="login-header">
+                    <h2>Iniciar Sesión</h2>
+                    <p>Introduce tu ID de inicio de sesión (correo electrónico) y contraseña</p>
+                </div>
+
+                <!-- Formulario de Inicio de Sesión -->
+                <form id="form-login" action="../htmlsemantico/index.html" method="POST">
+                    
+                    <div class="input-group">
+                        <label for="email">ID de inicio de sesión (Correo electrónico)</label>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@dominio.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-actions-help">
+                        <a href="recuperar.html" class="forgot-link">¿No puedes iniciar sesión?</a>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Siguiente</button>
+
+                </form>
+
+                <!-- Pie de tarjeta con opción de registro -->
+                <div class="login-footer">
+                    <p>¿Nuevo en PlayStation? <a href="registro.html">Crear una cuenta</a></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!--  ======================================================================
+  INSTITUCIÓN: CBTis 166 Pablo Torres Burgos
+  ----------------------------------------------------------------------
+  * Estudiante: Ricardo Abisai
+  * Grupo: 3B PRO VESP  
+  * Actividad: Práctica Temática sobre Formularios en HTML5
+  ====================================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña - PlayStation Network</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Contenedor principal que divide la pantalla en dos mitades -->
+    <div class="portal-container">
+
+        <!-- LADO IZQUIERDO: Panel de Marca Estilo PlayStation -->
+        <div class="portal-brand-side">
+            <div class="brand-content">
+                
+                <!-- Insignia superior -->
+                <div class="brand-badge">
+                    <span class="badge-dot"></span> Soporte de Cuenta
+                </div>
+
+                <div class="brand-logo-large">
+                    <span class="logo-icon">🎮</span>
+                    <h1>Play<span>Station</span></h1>
+                </div>
+                
+                <p class="brand-tagline">
+                    No te preocupes, recupera el acceso a tu cuenta de PlayStation Network de forma rápida y segura para volver a conectar con tu comunidad y juegos.
+                </p>
+
+                <!-- Tarjetas pequeñas de características -->
+                <div class="brand-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <div>
+                            <h4>Recuperación Segura</h4>
+                            <p>Te enviaremos un enlace de validación a tu correo electrónico registrado.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div>
+                            <h4>Proceso Rápido</h4>
+                            <p>Restablece tu contraseña y vuelve a entrar a tus partidas de inmediato.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- LADO DERECHO: Tarjeta del Formulario de Recuperación -->
+        <div class="portal-form-side">
+            <div class="login-card">
+                
+                <div class="login-header">
+                    <h2>¿Problemas para iniciar sesión?</h2>
+                    <p>Introduce tu ID de inicio de sesión (correo electrónico) para recibir las instrucciones</p>
+                </div>
+
+                <!-- Formulario de Recuperación -->
+                <form id="form-recuperar" action="index.html" method="GET">
+                    
+                    <div class="input-group">
+                        <label for="email">ID de inicio de sesión (Correo electrónico)</label>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@dominio.com" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Enlace de Recuperación</button>
+
+                </form>
+
+                <!-- Pie de tarjeta para regresar al login -->
+                <div class="login-footer">
+                    <p>¿Recordaste tu contraseña? <a href="index.html">Iniciar Sesión</a></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

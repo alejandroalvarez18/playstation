@@ -1,0 +1,318 @@
+/* ======================================================================
+   ESTILOS CORPORATIVOS - CINEFLIX (ESTILO VINO / CEREZA ELEGANTE)
+   ====================================================================== */
+- {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: #0b0e14; /* Fondo oscuro espacial profundo */
+}
+
+/* Contenedor general que divide la pantalla en dos columnas */
+.portal-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Izquierda más amplia, derecha simétrica */
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .portal-container {
+        grid-template-columns: 1fr; /* En celulares se vuelve una sola columna */
+    }
+    .portal-brand-side {
+        padding: 3rem 1.5rem !important;
+        min-height: 280px;
+    }
+}
+
+/* --------------------------------------------------------------------
+   PANEL IZQUIERDO: SALA PLAYSTATION CON FILTRO AZUL / AZUL ELÉCTRICO
+   -------------------------------------------------------------------- */
+.portal-brand-side {
+    /* Degradado en tonos oscuros con el azul característico de PlayStation sobre la imagen */
+    background: linear-gradient(135deg, rgba(11, 14, 20, 0.85), rgba(0, 112, 209, 0.45)), url('img/paraisotropical.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    color: white;
+}
+
+.brand-content {
+    max-width: 450px;
+}
+
+/* Insignia superior en tonos azul PlayStation / cian */
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(0, 112, 209, 0.25);
+    border: 1px solid rgba(0, 112, 209, 0.4);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #93c5fd;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(4px);
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #0070d1; /* Azul PlayStation brillante controlado */
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0070d1;
+}
+
+.brand-logo-large {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.brand-logo-large .logo-icon {
+    font-size: 2rem;
+    color: #00439c; /* Azul PlayStation institucional fuerte */
+}
+
+.brand-logo-large h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff; /* Letras blancas nítidas */
+}
+
+.brand-logo-large h1 span {
+    color: #38bdf8; /* El complemento con un azul cian / eléctrico vivo */
+}
+
+.brand-tagline {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    color: #cbd5e1; /* Gris claro suave */
+}
+
+/* Tarjetas de características estilo cristal oscuro con sutil borde azul PlayStation */
+.brand-features {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(11, 14, 20, 0.70); /* Fondo oscuro con matiz azulado */
+    border: 1px solid rgba(0, 112, 209, 0.35); /* Borde azul PlayStation elegante */
+    padding: 14px 18px;
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.6);
+}
+
+.feature-icon {
+    font-size: 1.3rem;
+    background: rgba(0, 112, 209, 0.3);
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-item h4 {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.feature-item p {
+    color: #a3a3a3;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+
+/* --------------------------------------------------------------------
+   PANEL DERECHO: FORMULARIO Y TARJETA
+   -------------------------------------------------------------------- */
+.portal-form-side {
+    background-color: #05070a; /* Negro espacial elegante para el formulario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+/* ======================================================================
+   TARJETA Y FORMULARIO EN MODO OSCURO (SIN FATIGA VISUAL)
+   ====================================================================== */
+.login-card {
+    background-color: #111827; /* Gris azulado oscuro profundo para cuidar la vista */
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: 480px;
+    border-top: 4px solid #0070d1; /* Línea superior en azul PlayStation */
+    color: #f5f5f5;
+}
+
+/* Encabezado del formulario */
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    color: #ffffff; /* Título blanco nítido */
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.login-header p {
+    color: #94a3b8; /* Subtítulo gris suave */
+    font-size: 0.9rem;
+}
+
+/* Grupos de campos */
+.input-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #cbd5e1; /* Gris claro legible */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs adaptados a modo oscuro */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #334155; /* Borde oscuro elegante */
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #1f2937; /* Fondo de input oscuro */
+    color: #ffffff; /* Letras blancas al escribir */
+    transition: all 0.2s ease;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+    border-color: #0070d1; /* Borde azul PlayStation al enfocar */
+    outline: none;
+    background-color: #374151;
+    box-shadow: 0 0 0 3px rgba(0, 112, 209, 0.25);
+}
+
+/* Estilos para Checkboxes y Radio Buttons */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0.5rem;
+    color: #cbd5e1;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    width: auto;
+    cursor: pointer;
+}
+
+/* Enlace de ayuda */
+.form-actions-help {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-link {
+    color: #38bdf8; /* Azul cian brillante para enlaces oscuros */
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Botón de envío principal (Azul PlayStation) */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0070d1; /* Tono azul PlayStation principal */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+    background-color: #00439c; /* Azul más oscuro al pasar el cursor */
+    box-shadow: 0 4px 12px rgba(0, 112, 209, 0.4);
+}
+
+/* Pie de tarjeta */
+.login-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #1f2937; /* Línea divisoria oscura */
+}
+
+.login-footer p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: #38bdf8; /* Enlace en azul cian legible sobre fondo oscuro */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}

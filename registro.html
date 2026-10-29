@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - PlayStation Network</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Contenedor general de dos columnas -->
+    <div class="portal-container">
+
+        <!-- LADO IZQUIERDO: Panel de Marca y Características -->
+        <div class="portal-brand-side">
+            <div class="brand-content">
+                
+                <div class="brand-badge">
+                    <span class="badge-dot"></span> Únete a la Comunidad
+                </div>
+
+                <div class="brand-logo-large">
+                    <span class="logo-icon">🎮</span>
+                    <h1>Play<span>Station</span></h1>
+                </div>
+                
+                <p class="brand-tagline">
+                    Crea tu cuenta de PlayStation Network en segundos. Obtén acceso a multijugador online, ofertas exclusivas en PlayStation Store y sincroniza tus trofeos.
+                </p>
+
+                <div class="brand-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✨</div>
+                        <div>
+                            <h4>Beneficios Exclusivos</h4>
+                            <p>Descuentos directos y juegos mensuales para miembros registrados.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div>
+                            <h4>Proceso Seguro</h4>
+                            <p>Tus datos y transacciones protegidos bajo estrictas normas de seguridad global.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- LADO DERECHO: Tarjeta del Formulario de Registro -->
+        <div class="portal-form-side">
+            <div class="login-card">
+                
+                <div class="login-header">
+                    <h2>Crear una Cuenta</h2>
+                    <p>Introduce tu fecha de nacimiento y tus datos para registrarte</p>
+                </div>
+
+                <!-- Formulario completo de Registro -->
+                <form id="form-registro" action="#" method="POST">
+                    
+                    <div class="input-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Mendoza" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">ID de inicio de sesión (Correo electrónico)</label>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@dominio.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="telefono">Teléfono Móvil</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="55-0000-0000">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" id="fecha-nacimiento" name="fecha_nacimiento">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="pais">País o Región</label>
+                        <select id="pais" name="pais">
+                            <option value="mx" selected>México</option>
+                            <option value="co">Colombia</option>
+                            <option value="ar">Argentina</option>
+                            <option value="es">España</option>
+                            <option value="us">Estados Unidos</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Género</label>
+                        <div style="display: flex; gap: 15px; margin-top: 5px;">
+                            <label style="font-weight: normal; text-transform: none; cursor: pointer; font-size: 0.9rem;">
+                                <input type="radio" name="genero" value="masculino"> Masculino
+                            </label>
+                            <label style="font-weight: normal; text-transform: none; cursor: pointer; font-size: 0.9rem;">
+                                <input type="radio" name="genero" value="femenino"> Femenino
+                            </label>
+                            <label style="font-weight: normal; text-transform: none; cursor: pointer; font-size: 0.9rem;">
+                                <input type="radio" name="genero" value="otro"> Otro
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-group checkbox-group">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <label for="terminos" style="display: inline; font-weight: normal; text-transform: none; font-size: 0.85rem; margin-bottom: 0;">
+                            Acepto los términos de servicio y la política de privacidad de PlayStation
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Siguiente</button>
+
+                </form>
+
+                <!-- Pie de tarjeta con enlace para regresar al Login -->
+                <div class="login-footer">
+                    <p>¿Ya tienes una cuenta? <a href="index.html">Iniciar Sesión</a></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script_registro.js"></script>
+</body>
+</html>
